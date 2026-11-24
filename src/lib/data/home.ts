@@ -1,0 +1,66 @@
+import type { L } from "@/lib/i18n/types";
+
+const W = (file: string) => `https://commons.wikimedia.org/wiki/Special:FilePath/${file}?width=900`;
+
+export const CITY_IMG: Record<string, string> = {
+  IST: W("SunsetOverTheBosphorus1.JPG"),
+  MOW: W("Saint_Basil's_Cathedral,_Red_Square,_Moscow,_Russia.jpg"),
+  DXB: W("Burj_Al_Arab_and_Jumeirah_Beach_(9601659067).jpg"),
+  ALA: W("Almaty_Skyline_from_the_K%C3%B6k_T%C3%B6be_hill.jpg"),
+  AYT: W("Kemer_beach,_Antalya.jpg"),
+  BKK: W("Chao_Phraya_-_Wat_Arun.JPG"),
+};
+
+/** Popular destinations from Bishkek — each card opens a WhatsApp request. */
+export const DESTS: string[] = ["IST", "DXB", "MOW", "ALA", "AYT", "BKK"];
+
+export const FAQ: { q: L; a: L }[] = [
+  {
+    q: { ru: "Как купить авиабилет?", ky: "Авиабилетти кантип сатып алам?", en: "How do I buy a flight ticket?" },
+    a: {
+      ru: "Укажите на сайте города, даты и пассажиров и нажмите «Запросить в WhatsApp» — откроется готовое сообщение. Менеджер подберёт рейсы по лучшей цене, забронирует и пришлёт электронный билет.",
+      ky: "Сайтта шаарларды, күндөрдү жана жүргүнчүлөрдү көрсөтүп, «WhatsApp аркылуу суроо» баскычын басыңыз — даяр билдирүү ачылат. Менеджер эң жакшы баадагы рейстерди тандап, брондоп, электрондук билетти жөнөтөт.",
+      en: "Enter cities, dates and passengers on the site and press “Request via WhatsApp” — a ready message opens. A manager will find the best fares, book them and send you the e-ticket.",
+    },
+  },
+  {
+    q: { ru: "Как оформить тур?", ky: "Турду кантип тариздейм?", en: "How do I book a tour?" },
+    a: {
+      ru: "Откройте тур, выберите дату вылета, отель и количество туристов и нажмите «Оформить через WhatsApp». Менеджер подтвердит наличие мест и пришлёт договор и реквизиты для оплаты.",
+      ky: "Турду ачып, учуу күнүн, мейманкананы жана туристтердин санын тандап, «WhatsApp аркылуу тариздөө» баскычын басыңыз. Менеджер орундарды ырастап, келишимди жана төлөм реквизиттерин жөнөтөт.",
+      en: "Open a tour, choose the departure date, hotel and number of travellers and press “Book via WhatsApp”. A manager will confirm availability and send the contract and payment details.",
+    },
+  },
+  {
+    q: { ru: "Цены на сайте окончательные?", ky: "Сайттагы баалар акыркыбы?", en: "Are the prices on the site final?" },
+    a: {
+      ru: "Цены туров указаны «от» за 1 человека при двухместном размещении и зависят от наличия мест. Точную стоимость менеджер подтвердит перед оплатой.",
+      ky: "Турлардын баалары эки орундуу жайгашууда 1 адамга «баштап» көрсөтүлгөн жана орундардын болушуна жараша. Так бааны менеджер төлөмгө чейин ырастайт.",
+      en: "Tour prices are “from” per person in a double room and depend on availability. A manager will confirm the exact price before you pay.",
+    },
+  },
+  {
+    q: { ru: "Как оплатить?", ky: "Кантип төлөйм?", en: "How can I pay?" },
+    a: {
+      ru: "Картой Visa или MasterCard, по QR через мобильный банкинг или в офисе. Все расчёты — в сомах по курсу на день оплаты.",
+      ky: "Visa же MasterCard картасы, мобилдик банкинг аркылуу QR же кеңседе. Бардык эсептешүүлөр — төлөм күнүндөгү курс боюнча сом менен.",
+      en: "By Visa or MasterCard, by QR via mobile banking or at the office. All payments are in KGS at the rate on the day of payment.",
+    },
+  },
+  {
+    q: { ru: "Как вернуть или обменять билет?", ky: "Билетти кантип кайтарып же алмаштырсам болот?", en: "How do I refund or change a ticket?" },
+    a: {
+      ru: "Напишите менеджеру в WhatsApp номер брони. Возврат и обмен оформляются по правилам тарифа авиакомпании — сумму к возврату или доплате мы сообщим заранее.",
+      ky: "Менеджерге WhatsApp аркылуу брондун номерин жазыңыз. Кайтаруу жана алмаштыруу авиакомпаниянын тарифинин эрежелери боюнча тариздейт — кайтарыла турган же кошумча төлөнө турган сумманы алдын ала айтабыз.",
+      en: "Send your booking number to a manager on WhatsApp. Refunds and changes follow the airline's fare rules — we'll tell you the refund or extra amount in advance.",
+    },
+  },
+  {
+    q: { ru: "Нужна ли виза и помогаете ли вы с ней?", ky: "Виза керекпи жана силер жардам бересиңерби?", en: "Do I need a visa and do you help with it?" },
+    a: {
+      ru: "Для многих направлений из Кыргызстана виза не нужна. Для остальных подскажем список документов и поможем с визовой поддержкой.",
+      ky: "Кыргызстандан көптөгөн багыттарга виза керек эмес. Калгандары үчүн документтердин тизмесин айтып, виза колдоосуна жардам беребиз.",
+      en: "Many destinations are visa-free from Kyrgyzstan. For the rest we'll advise on documents and help with visa support.",
+    },
+  },
+];
