@@ -19,7 +19,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: { default: "SAKBOL Travel — " + t("nav_flights").toLowerCase() + ", " + t("nav_tours").toLowerCase(), template: "%s · SAKBOL Travel" },
     description: t("hero_lead"),
-    icons: { icon: "/favicon.ico" },
   };
 }
 
