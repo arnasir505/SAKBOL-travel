@@ -23,18 +23,29 @@ export function pageMeta({ lang, path, title, fullTitle, description, image }: {
   };
 }
 
-/** schema.org data for the home page — lets search engines show the agency's name, logo and contacts. */
+/** schema.org data for the home page — lets search engines show the agency's name, logo and contacts.
+ *  WebSite is what Google reads for the site name shown above the result (instead of the bare domain). */
 export function agencyJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    name: site.name,
-    url: site.url,
-    logo: `${site.url}/brand/logo-orange.png`,
-    image: `${site.url}${OG_IMAGE.url}`,
-    telephone: site.phone.replace(/\s/g, ""),
-    email: site.email,
-    address: { "@type": "PostalAddress", addressLocality: "Бишкек", addressCountry: "KG" },
-    sameAs: [site.instagram, site.telegram],
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: site.name,
+        alternateName: ["SAKBOL", "САКБОЛ Тревел"],
+        url: `${site.url}/`,
+      },
+      {
+        "@type": "TravelAgency",
+        name: site.name,
+        url: site.url,
+        logo: `${site.url}/brand/logo-orange.png`,
+        image: `${site.url}${OG_IMAGE.url}`,
+        telephone: site.phone.replace(/\s/g, ""),
+        email: site.email,
+        address: { "@type": "PostalAddress", addressLocality: "Бишкек", addressCountry: "KG" },
+        sameAs: [site.instagram, site.telegram],
+      },
+    ],
   };
 }
