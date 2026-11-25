@@ -3,9 +3,6 @@ import type { L } from "@/lib/i18n/types";
 /** Shorthand for a string in all three languages (ru, en, ky). */
 export const l = (ru: string, en: string, ky: string): L => ({ ru, en, ky });
 
-/** Wikimedia Commons image by file name. */
-export const W = (file: string) => `https://commons.wikimedia.org/wiki/Special:FilePath/${file}?width=1200`;
-
 /** Common "what's included" items. */
 export const INC = {
   flight: l("Авиаперелёт", "Return flights", "Авиаучуу"),

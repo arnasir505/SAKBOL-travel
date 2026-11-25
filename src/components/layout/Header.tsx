@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -98,8 +99,7 @@ export function Header() {
     <header className="top">
       <div className="wrap bar">
         <Link className="logo" href="/" aria-label="SAKBOL Travel">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logo-orange.png" alt="SAKBOL Travel" width={97} height={32} />
+          <Image src="/brand/logo-orange.png" alt="SAKBOL Travel" width={97} height={32} loading="eager" />
         </Link>
         <nav className="main">
           {nav.map((n) => (
@@ -130,8 +130,7 @@ export function Header() {
           <div className="mnav" onClick={() => setOpen(false)}>
             <div className="sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={t("menu")}>
               <div className="mnav-head">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/brand/logo-orange.png" alt="SAKBOL Travel" style={{ height: 28 }} />
+                <Image src="/brand/logo-orange.png" alt="SAKBOL Travel" width={85} height={28} />
                 <button className="icon-btn" onClick={() => setOpen(false)} aria-label={t("close")}>
                   <X />
                 </button>

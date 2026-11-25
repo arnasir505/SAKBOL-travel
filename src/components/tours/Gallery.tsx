@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Images } from "lucide-react";
 import { useT } from "@/lib/i18n/client";
@@ -30,16 +31,15 @@ export function Gallery({ images, title }: { images: string[]; title: string }) 
       <div className="gallery">
         {images.map((src, i) => (
           <button key={src} className="gal-item" onClick={() => setOpen(i)} aria-label={t("tour_photo_n", { n: i + 1, total: n })}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={src} alt="" loading="lazy" />
+            <Image src={src} alt="" fill sizes="(max-width: 720px) 50vw, 240px" />
           </button>
         ))}
       </div>
       {open != null && (
         <Modal title={`${title} · ${t("tour_photo_n", { n: open + 1, total: n })}`} onClose={() => setOpen(null)} wide>
           <div className="lightbox">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={images[open]} alt={title} />
+            {/* Size comes from CSS (max 72vh tall); width/height are only the aspect-ratio hint before load. */}
+            <Image src={images[open]} alt={title} width={1200} height={800} sizes="(max-width: 1100px) 100vw, 1100px" loading="eager" />
             {n > 1 && (
               <>
                 <button className="lb-nav prev" onClick={() => setOpen((open - 1 + n) % n)} aria-label={t("prev")}>

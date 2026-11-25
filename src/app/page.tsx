@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CircleCheck, CreditCard, MessageCircle, Search, ShieldCheck, Star, TreePalm } from "lucide-react";
 import { site } from "@/config/site";
@@ -41,7 +42,8 @@ export default async function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(agencyJsonLd()) }} />
       {/* HERO */}
       <div className="hero on-dark">
-        <div className="photo" />
+        {/* LCP image: in the HTML from the start and fetched first, as WebP sized to the screen. */}
+        <Image className="photo" src="/img/hero-beach.jpg" alt="" fill sizes="100vw" loading="eager" fetchPriority="high" />
         <div className="tint" />
         <div className="scrim" />
         <div className="orn" />
@@ -108,8 +110,7 @@ export default async function Home() {
               const name = pick(cityByCode(code)!.name, lang);
               return (
                 <a key={code} className="dest" href={waLink(lines(`${t("msg_hello")} ${t("msg_dest", { from: bishkek, to: name })}`))} target="_blank" rel="noopener noreferrer">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={CITY_IMG[code]} alt="" loading="lazy" />
+                  <Image src={CITY_IMG[code]} alt="" fill sizes="(max-width: 720px) 50vw, (max-width: 1080px) 33vw, 200px" />
                   <b>{name}</b>
                   <small>{t("btn_dest_price")}</small>
                 </a>

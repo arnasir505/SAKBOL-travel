@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Flame, History, Moon, Plane } from "lucide-react";
 import { minTourPrice, type Tour } from "@/lib/data/tours";
@@ -15,8 +16,7 @@ export function TourCard({ tour, past }: { tour: Tour; past?: boolean }) {
   return (
     <Link className={`tour ${past ? "past" : ""}`} href={`/tours/${tour.slug}`}>
       <div className="ph">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={tour.img} alt="" loading="lazy" />
+        <Image src={tour.img} alt="" fill sizes="(max-width: 720px) 100vw, (max-width: 1080px) 50vw, 300px" />
         <span className="cat">{t(`cat_${tour.categories[0]}` as DictKey)}</span>
         {past ? (
           <span className="hotflag pastflag">

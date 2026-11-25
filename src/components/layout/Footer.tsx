@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Info } from "lucide-react";
 import { site } from "@/config/site";
@@ -15,8 +16,7 @@ export function Footer() {
         <div className="fgrid">
           <div className="fcol fabout">
             <Link className="logo" href="/">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/brand/logo-orange.png" alt="SAKBOL Travel" width={97} height={32} />
+              <Image src="/brand/logo-orange.png" alt="SAKBOL Travel" width={97} height={32} />
             </Link>
             <p>{t("foot_about")}</p>
             <div className="fsoc">
@@ -26,7 +26,7 @@ export function Footer() {
             </div>
           </div>
           <div className="fcol">
-            <h4>{t("fc_serv")}</h4>
+            <h3>{t("fc_serv")}</h3>
             <Link href="/">{t("nav_flights")}</Link>
             <Link href="/tours">{t("nav_tours")}</Link>
             <Link href="/hotels">{t("nav_hotels")}</Link>
@@ -34,13 +34,13 @@ export function Footer() {
             <Link href="/hotels?type=visa">{t("fc_visa")}</Link>
           </div>
           <div className="fcol">
-            <h4>{t("fc_comp")}</h4>
+            <h3>{t("fc_comp")}</h3>
             <Link href="/about">{t("nav_about")}</Link>
             <Link href="/help#payment">{t("fc_pay")}</Link>
             <a href={waLink(t("msg_hello"))} target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
           <div className="fcol">
-            <h4>{t("fc_help")}</h4>
+            <h3>{t("fc_help")}</h3>
             <Link href="/about#contacts">{t("nav_contacts")}</Link>
             <a href={site.phoneHref}>{site.phone}</a>
             <a href={`mailto:${site.email}`}>{site.email}</a>

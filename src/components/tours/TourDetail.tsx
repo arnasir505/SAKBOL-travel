@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowLeft, CalendarDays, Check, CircleAlert, Gift, Info, MapPin, Minus, Plane, Plus, Route, Sparkles, Star } from "lucide-react";
@@ -58,8 +59,7 @@ export function TourDetail({ tour, expired, other }: { tour: Tour; expired: bool
   return (
     <>
       <div className="tour-hero">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={tour.img} alt="" />
+        <Image src={tour.img} alt="" fill sizes="100vw" loading="eager" fetchPriority="high" />
         <div className="scrim" />
         <div className="wrap inner">
           <Link className="back" href="/tours">

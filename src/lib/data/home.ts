@@ -1,14 +1,15 @@
 import type { L } from "@/lib/i18n/types";
 
-const W = (file: string) => `https://commons.wikimedia.org/wiki/Special:FilePath/${file}?width=900`;
+/** Destination photos in /public/img/places (file name with extension). */
+const P = (file: string) => `/img/places/${file}`;
 
 export const CITY_IMG: Record<string, string> = {
-  IST: W("SunsetOverTheBosphorus1.JPG"),
-  MOW: W("Saint_Basil's_Cathedral,_Red_Square,_Moscow,_Russia.jpg"),
-  DXB: W("Burj_Al_Arab_and_Jumeirah_Beach_(9601659067).jpg"),
-  ALA: W("Almaty_Skyline_from_the_K%C3%B6k_T%C3%B6be_hill.jpg"),
-  AYT: W("Kemer_beach,_Antalya.jpg"),
-  BKK: W("Chao_Phraya_-_Wat_Arun.JPG"),
+  IST: P("istanbul.webp"),
+  MOW: P("moscow.webp"),
+  DXB: P("dubai.webp"),
+  ALA: P("almaty.webp"),
+  AYT: P("antalya.webp"),
+  BKK: P("bangkok.webp"),
 };
 
 /** Popular destinations from Bishkek — each card opens a WhatsApp request. */
