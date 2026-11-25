@@ -16,7 +16,6 @@ export default async function HelpPage() {
   return (
     <div className="wrap">
       <div className="page-head">
-        <div className="eyebrow">{t("eb_faq")}</div>
         <h1>{t("help_h1")}</h1>
       </div>
       <div className="faq" style={{ margin: "20px 0 0", maxWidth: "none" }}>

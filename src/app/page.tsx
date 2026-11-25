@@ -67,7 +67,6 @@ export default async function Home() {
         <div className="wrap">
           <div className="head">
             <div>
-              <div className="eyebrow">{t("eb_tours")}</div>
               <h2>{t("tours_h2")}</h2>
             </div>
             <Link className="morelink" href="/tours">
@@ -84,7 +83,6 @@ export default async function Home() {
         <div className="wrap">
           <div className="head">
             <div>
-              <div className="eyebrow">{t("eb_how")}</div>
               <h2>{t("how_h2")}</h2>
             </div>
           </div>
@@ -101,7 +99,6 @@ export default async function Home() {
         <div className="wrap">
           <div className="head">
             <div>
-              <div className="eyebrow">{t("eb_dest")}</div>
               <h2>{t("dest_h2")}</h2>
               <p className="sub">{t("dest_sub")}</p>
             </div>
@@ -158,7 +155,6 @@ export default async function Home() {
         <div className="wrap">
           <div className="head center">
             <div>
-              <div className="eyebrow">{t("eb_faq")}</div>
               <h2>{t("faq_h2")}</h2>
             </div>
           </div>

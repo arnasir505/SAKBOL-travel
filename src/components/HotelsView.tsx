@@ -54,7 +54,6 @@ export function HotelsView({ type, city, din, dout, guests }: { type: Kind; city
   return (
     <div className="wrap">
       <div className="page-head">
-        <div className="eyebrow">{t("nav_hotels")}</div>
         <h1>{title}</h1>
         <p className="sub">{t("hotels_sub")}</p>
       </div>

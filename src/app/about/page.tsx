@@ -14,7 +14,6 @@ export default async function AboutPage() {
   return (
     <div className="wrap">
       <div className="page-head">
-        <div className="eyebrow">SAKBOL Travel</div>
         <h1>{t("about_h1")}</h1>
         <p className="sub">{t("foot_about")}</p>
       </div>

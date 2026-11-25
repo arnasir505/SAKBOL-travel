@@ -40,7 +40,6 @@ export function ToursList({ tours, past, initial }: { tours: Tour[]; past: Tour[
   return (
     <div className="wrap">
       <div className="page-head">
-        <div className="eyebrow">{t("eb_tours")}</div>
         <h1>{t("tours_page_h1")}</h1>
         <p className="sub">{t("tours_page_sub")}</p>
       </div>

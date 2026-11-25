@@ -80,13 +80,10 @@ export const en: Dict = {
   err_need_adult: "At least one adult is required",
   err_inf: "There can't be more infants than adults",
 
-  eb_tours: "Tour finder",
   tours_h2: "Ready tours from trusted operators",
   tours_sub: "Package tours: flight + hotel + transfer. Prices and dates are current; booking is via WhatsApp.",
   more_tours: "All tours",
-  eb_dest: "Destinations",
   dest_h2: "Where we fly from Bishkek and Osh",
-  eb_how: "How it works",
   how_h2: "How to book a trip",
   how_1_t: "Choose a tour or route",
   how_1_d: "Current tours with prices and details are on the site. For flights, enter route, dates and passengers.",
@@ -98,7 +95,6 @@ export const en: Dict = {
   cta_p: "Flights, tours, hotels and visas — message us and a manager will reply during business hours.",
   hot_line: "Hotline",
   hot_wh: "Daily {hours}",
-  eb_faq: "Q&A",
   faq_h2: "Frequently asked questions",
 
   fc_serv: "Services",
