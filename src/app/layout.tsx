@@ -7,6 +7,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 import { waLink } from "@/lib/whatsapp";
+import { site } from "@/config/site";
+import { OG_IMAGE } from "@/lib/seo";
 import "@/styles/base.css";
 import "@/styles/home.css";
 import "@/styles/pages.css";
@@ -17,8 +19,11 @@ const manrope = Manrope({ subsets: ["latin", "cyrillic"], weight: ["400", "500",
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = makeT(await getLang());
   return {
-    title: { default: "SAKBOL Travel — " + t("nav_flights").toLowerCase() + ", " + t("nav_tours").toLowerCase(), template: "%s · SAKBOL Travel" },
-    description: t("hero_lead"),
+    metadataBase: new URL(site.url),
+    title: { default: t("meta_title"), template: "%s · SAKBOL Travel" },
+    description: t("meta_desc"),
+    openGraph: { type: "website", siteName: site.name, title: t("meta_title"), description: t("meta_desc"), images: [{ ...OG_IMAGE, alt: t("meta_title") }] },
+    twitter: { card: "summary_large_image" },
   };
 }
 

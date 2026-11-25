@@ -1,3 +1,4 @@
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 import { FAQ } from "@/lib/data/home";
 import { pick } from "@/lib/i18n/types";
@@ -6,8 +7,8 @@ import { waLink } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { t } = await getT();
-  return { title: t("help_h1") };
+  const { t, lang } = await getT();
+  return pageMeta({ lang, path: "/help", title: t("help_h1"), fullTitle: `${t("help_h1")} · SAKBOL Travel`, description: t("meta_help_desc") });
 }
 
 export default async function HelpPage() {

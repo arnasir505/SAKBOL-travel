@@ -1,6 +1,8 @@
 /** Site-wide settings. Replace placeholders with real contacts before launch. */
 export const site = {
   name: "SAKBOL Travel",
+  /** Main public address (www is primary on Vercel; sakboltravel.kg redirects here). Used for canonical URLs, sitemap and previews. */
+  url: "https://www.sakboltravel.kg",
   phone: "+996 506 636 364",
   phoneHref: "tel:+996506636364",
   email: "sakboltravel@gmail.com",

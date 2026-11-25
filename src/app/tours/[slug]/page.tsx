@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { pageMeta } from "@/lib/seo";
 import { actualTours, tourBySlug } from "@/lib/data/tours";
 import { todayISO } from "@/lib/flights/search-params";
 import { pick } from "@/lib/i18n/types";
@@ -12,7 +13,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const found = tourBySlug((await params).slug, todayISO());
   if (!found) return {};
   const lang = await getLang();
-  return { title: pick(found.tour.title, lang), description: pick(found.tour.intro, lang), openGraph: { images: [found.tour.img] } };
+  const title = pick(found.tour.title, lang);
+  return pageMeta({ lang, path: `/tours/${found.tour.slug}`, title, fullTitle: `${title} · SAKBOL Travel`, description: pick(found.tour.intro, lang), image: found.tour.img });
 }
 
 export default async function TourPage({ params }: Props) {

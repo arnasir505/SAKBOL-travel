@@ -1,11 +1,12 @@
+import { pageMeta } from "@/lib/seo";
 import type { Metadata } from "next";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { site } from "@/config/site";
 import { getT } from "@/lib/i18n/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { t } = await getT();
-  return { title: t("about_h1") };
+  const { t, lang } = await getT();
+  return pageMeta({ lang, path: "/about", title: t("about_h1"), fullTitle: `${t("about_h1")} · SAKBOL Travel`, description: t("meta_about_desc") });
 }
 
 export default async function AboutPage() {

@@ -3,10 +3,11 @@ import { actualTours, pastTours } from "@/lib/data/tours";
 import { todayISO } from "@/lib/flights/search-params";
 import { getT } from "@/lib/i18n/server";
 import { ToursList } from "@/components/tours/ToursList";
+import { pageMeta } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { t } = await getT();
-  return { title: t("tours_page_h1"), description: t("tours_page_sub") };
+  const { t, lang } = await getT();
+  return pageMeta({ lang, path: "/tours", title: t("tours_page_h1"), fullTitle: `${t("tours_page_h1")} · SAKBOL Travel`, description: t("tours_page_sub") });
 }
 
 export default async function ToursPage({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {

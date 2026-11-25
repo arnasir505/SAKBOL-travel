@@ -12,6 +12,12 @@ export const en: Dict = {
   close: "Close",
 
   hero_h1: "Fly and travel with SAKBOL Travel",
+  meta_title: "SAKBOL Travel — tours, flights and visas from Bishkek",
+  meta_desc: "SAKBOL Travel, a travel agency in Bishkek: package tours, flights worldwide, hotels, charters and visa support. Current tours with dates and prices.",
+  meta_charter_desc: "Charter flights for groups and companies — we'll find the aircraft and route for your request.",
+  meta_visa_desc: "Visa support for the Schengen area, China and other countries — we'll help prepare documents and apply.",
+  meta_about_desc: "SAKBOL Travel is the travel arm of the SAKBOL group in Bishkek. Contacts and opening hours.",
+  meta_help_desc: "Answers to common questions: how to book a tour or flight, payment and refunds.",
   hero_lead: "Flights worldwide and ready-made tours from trusted operators — all in one place.",
   trust_1: "400+ airlines",
   trust_2: "All-inclusive tours",

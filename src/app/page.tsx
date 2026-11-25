@@ -12,6 +12,13 @@ import { lines, waLink } from "@/lib/whatsapp";
 import { SearchCard } from "@/components/search/SearchCard";
 import { ToursShowcase } from "@/components/home/ToursShowcase";
 import { WhatsAppIcon } from "@/components/ui/SocialIcons";
+import type { Metadata } from "next";
+import { agencyJsonLd, pageMeta } from "@/lib/seo";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { t, lang } = await getT();
+  return pageMeta({ lang, path: "/", fullTitle: t("meta_title"), description: t("meta_desc") });
+}
 
 export default async function Home() {
   const { t, lang } = await getT();
@@ -30,6 +37,8 @@ export default async function Home() {
 
   return (
     <>
+      {/* schema.org: agency name, logo and contacts for search engines */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(agencyJsonLd()) }} />
       {/* HERO */}
       <div className="hero on-dark">
         <div className="photo" />
