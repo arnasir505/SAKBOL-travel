@@ -18,17 +18,17 @@ export const FAQ: { q: L; a: L }[] = [
   {
     q: { ru: "Как купить авиабилет?", ky: "Авиабилетти кантип сатып алам?", en: "How do I buy a flight ticket?" },
     a: {
-      ru: "Укажите на сайте города, даты и пассажиров и нажмите «Запросить в WhatsApp» — откроется готовое сообщение. Менеджер подберёт рейсы по лучшей цене, забронирует и пришлёт электронный билет.",
-      ky: "Сайтта шаарларды, күндөрдү жана жүргүнчүлөрдү көрсөтүп, «WhatsApp аркылуу суроо» баскычын басыңыз — даяр билдирүү ачылат. Менеджер эң жакшы баадагы рейстерди тандап, брондоп, электрондук билетти жөнөтөт.",
-      en: "Enter cities, dates and passengers on the site and press “Request via WhatsApp” — a ready message opens. A manager will find the best fares, book them and send you the e-ticket.",
+      ru: "Укажите на сайте города, даты и пассажиров и нажмите «Найти билеты» — заявка уйдёт менеджеру. Он подберёт рейсы по лучшей цене, забронирует и пришлёт электронный билет.",
+      ky: "Сайтта шаарларды, күндөрдү жана жүргүнчүлөрдү көрсөтүп, «Билет издөө» баскычын басыңыз — өтүнмө менеджерге жөнөтүлөт. Менеджер эң жакшы баадагы рейстерди тандап, брондоп, электрондук билетти жөнөтөт.",
+      en: "Enter cities, dates and passengers on the site and press “Find flights” — your request goes to a manager, who will find the best fares, book them and send you the e-ticket.",
     },
   },
   {
     q: { ru: "Как оформить тур?", ky: "Турду кантип тариздейм?", en: "How do I book a tour?" },
     a: {
-      ru: "Откройте тур, выберите дату вылета, отель и количество туристов и нажмите «Оформить через WhatsApp». Менеджер подтвердит наличие мест и пришлёт договор и реквизиты для оплаты.",
-      ky: "Турду ачып, учуу күнүн, мейманкананы жана туристтердин санын тандап, «WhatsApp аркылуу тариздөө» баскычын басыңыз. Менеджер орундарды ырастап, келишимди жана төлөм реквизиттерин жөнөтөт.",
-      en: "Open a tour, choose the departure date, hotel and number of travellers and press “Book via WhatsApp”. A manager will confirm availability and send the contract and payment details.",
+      ru: "Откройте тур, выберите дату вылета, отель и количество туристов и нажмите «Забронировать». Менеджер подтвердит наличие мест и пришлёт договор и реквизиты для оплаты.",
+      ky: "Турду ачып, учуу күнүн, мейманкананы жана туристтердин санын тандап, «Брондоо» баскычын басыңыз. Менеджер орундарды ырастап, келишимди жана төлөм реквизиттерин жөнөтөт.",
+      en: "Open a tour, choose the departure date, hotel and number of travellers and press “Book now”. A manager will confirm availability and send the contract and payment details.",
     },
   },
   {
@@ -50,9 +50,9 @@ export const FAQ: { q: L; a: L }[] = [
   {
     q: { ru: "Как вернуть или обменять билет?", ky: "Билетти кантип кайтарып же алмаштырсам болот?", en: "How do I refund or change a ticket?" },
     a: {
-      ru: "Напишите менеджеру в WhatsApp номер брони. Возврат и обмен оформляются по правилам тарифа авиакомпании — сумму к возврату или доплате мы сообщим заранее.",
-      ky: "Менеджерге WhatsApp аркылуу брондун номерин жазыңыз. Кайтаруу жана алмаштыруу авиакомпаниянын тарифинин эрежелери боюнча тариздейт — кайтарыла турган же кошумча төлөнө турган сумманы алдын ала айтабыз.",
-      en: "Send your booking number to a manager on WhatsApp. Refunds and changes follow the airline's fare rules — we'll tell you the refund or extra amount in advance.",
+      ru: "Сообщите менеджеру номер брони. Возврат и обмен оформляются по правилам тарифа авиакомпании — сумму к возврату или доплате мы сообщим заранее.",
+      ky: "Менеджерге брондун номерин жазыңыз. Кайтаруу жана алмаштыруу авиакомпаниянын тарифинин эрежелери боюнча тариздейт — кайтарыла турган же кошумча төлөнө турган сумманы алдын ала айтабыз.",
+      en: "Send your booking number to a manager. Refunds and changes follow the airline's fare rules — we'll tell you the refund or extra amount in advance.",
     },
   },
   {

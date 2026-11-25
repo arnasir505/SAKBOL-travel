@@ -97,7 +97,7 @@ export const en: Dict = {
   cta_h2: "We'll arrange your trip right in WhatsApp",
   cta_p: "Flights, tours, hotels and visas — message us and a manager will reply during business hours.",
   hot_line: "Hotline",
-  hot_wh: "Daily {hours} · WhatsApp & Telegram",
+  hot_wh: "Daily {hours}",
   eb_faq: "Q&A",
   faq_h2: "Frequently asked questions",
 
@@ -130,7 +130,7 @@ export const en: Dict = {
 
 
   tours_page_h1: "Tours from Bishkek",
-  tours_page_sub: "Package tours with flights, accommodation and transfers. Pick a tour — a manager will confirm availability and book it via WhatsApp.",
+  tours_page_sub: "Package tours with flights, accommodation and transfers.",
   cat_beach: "Beach",
   cat_excursion: "Sightseeing",
   cat_mountain: "Mountains",

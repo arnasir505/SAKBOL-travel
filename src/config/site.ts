@@ -5,7 +5,7 @@ export const site = {
   url: "https://www.sakboltravel.kg",
   phone: "+996 506 636 364",
   phoneHref: "tel:+996506636364",
-  email: "sakboltravel@gmail.com",
+  email: "office.sakboltravel.kg@gmail.com",
   /** WhatsApp number in international format, digits only — all requests go here. */
   whatsapp: "996506636364",
   telegram: "https://t.me/sakboltravel",

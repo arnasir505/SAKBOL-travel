@@ -111,7 +111,6 @@ export function ToursList({ tours, past, initial }: { tours: Tour[]; past: Tour[
           <div className="head">
             <div>
               <h2>{t("tours_past_h")}</h2>
-              <p className="sub">{t("tours_past_sub")}</p>
             </div>
           </div>
           <div className="tours">

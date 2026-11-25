@@ -173,7 +173,8 @@ section.blk { padding: 64px 0; }
 .qa { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-m); overflow: hidden; }
 .qa summary { list-style: none; cursor: pointer; padding: 19px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: var(--ff-display); font-weight: 700; font-size: 16.5px; }
 .qa summary::-webkit-details-marker { display: none; }
-.qa .plus { width: 26px; height: 26px; flex: none; border-radius: 50%; background: var(--brand-tint); color: var(--brand-deep); display: grid; place-items: center; font-size: 18px; transition: .2s; font-weight: 700; line-height: 1; }
+.qa .plus { width: 26px; height: 26px; flex: none; border-radius: 50%; background: var(--brand-tint); color: var(--brand-deep); display: grid; place-items: center; transition: .2s; line-height: 1; }
+.qa .plus svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: .6; stroke-linecap: round; stroke-linejoin: round; }
 .qa[open] .plus { transform: rotate(45deg); background: var(--brand); color: #fff; }
 .qa .ans { padding: 0 22px 20px; color: var(--ink-2); line-height: 1.6; }
 
