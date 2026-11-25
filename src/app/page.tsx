@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import { ArrowRight, CircleCheck, CreditCard, MessageCircle, Search, ShieldCheck, Star, TreePalm } from "lucide-react";
 import { site } from "@/config/site";
@@ -21,6 +21,12 @@ export async function generateMetadata(): Promise<Metadata> {
   return pageMeta({ lang, path: "/", fullTitle: t("meta_title"), description: t("meta_desc") });
 }
 
+// Hero photo: full frame on wider screens. Up to 1080px the box is still taller than the
+// photo's 2.4:1 ratio, so `cover` draws it wider than the screen — request up to 160vw.
+const heroDesktop = getImageProps({ src: "/img/hero-beach.jpg", alt: "", fill: true, sizes: "(max-width: 1080px) 160vw, 100vw" }).props;
+// Phones get a centre crop (palm + hammock) that matches the nearly square hero box.
+const heroMobile = getImageProps({ src: "/img/hero-beach-mobile.jpg", alt: "", fill: true, sizes: "100vw", loading: "eager", fetchPriority: "high" }).props;
+
 export default async function Home() {
   const { t, lang } = await getT();
   const today = todayISO();
@@ -42,8 +48,13 @@ export default async function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(agencyJsonLd()) }} />
       {/* HERO */}
       <div className="hero on-dark">
-        {/* LCP image: in the HTML from the start and fetched first, as WebP sized to the screen. */}
-        <Image className="photo" src="/img/hero-beach.jpg" alt="" fill sizes="100vw" loading="eager" fetchPriority="high" />
+        {/* LCP image: in the HTML from the start and fetched first. On phones the hero box is
+            nearly square, so a centre crop is used there; the full 2000px-wide photo would be
+            stretched about 2.6× wider than the screen and look blurry. */}
+        <picture>
+          <source media="(min-width: 721px)" srcSet={heroDesktop.srcSet} sizes={heroDesktop.sizes} />
+          <img {...heroMobile} alt="" className="photo" />
+        </picture>
         <div className="tint" />
         <div className="scrim" />
         <div className="orn" />
@@ -110,7 +121,8 @@ export default async function Home() {
               const name = pick(cityByCode(code)!.name, lang);
               return (
                 <a key={code} className="dest" href={waLink(lines(`${t("msg_hello")} ${t("msg_dest", { from: bishkek, to: name })}`))} target="_blank" rel="noopener noreferrer">
-                  <Image src={CITY_IMG[code]} alt="" fill sizes="(max-width: 720px) 50vw, (max-width: 1080px) 33vw, 200px" />
+                  {/* Cards are 3:4 and most photos are 3:2, so `cover` draws the photo about twice as wide as the card — request twice the card width. */}
+                  <Image src={CITY_IMG[code]} alt="" fill sizes="(max-width: 720px) 100vw, (max-width: 1080px) 67vw, 360px" />
                   <b>{name}</b>
                   <small>{t("btn_dest_price")}</small>
                 </a>

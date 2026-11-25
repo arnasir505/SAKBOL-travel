@@ -59,7 +59,8 @@ export function TourDetail({ tour, expired, other }: { tour: Tour; expired: bool
   return (
     <>
       <div className="tour-hero">
-        <Image src={tour.img} alt="" fill sizes="100vw" loading="eager" fetchPriority="high" />
+        {/* The hero is 380px tall, so on narrow phones a landscape photo is drawn wider than the screen (≈570px for 3:2). */}
+        <Image src={tour.img} alt="" fill sizes="(max-width: 600px) 600px, 100vw" loading="eager" fetchPriority="high" />
         <div className="scrim" />
         <div className="wrap inner">
           <Link className="back" href="/tours">
