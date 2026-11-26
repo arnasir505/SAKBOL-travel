@@ -23,6 +23,9 @@ export function pageMeta({ lang, path, title, fullTitle, description, image }: {
   };
 }
 
+/** Other spellings people search for: Cyrillic forms of the name (Russian and Kyrgyz use the same spelling). */
+const ALT_NAMES = ["SAKBOL", "Сакбол Тревел", "Сакбол Travel", "Сакбол"];
+
 /** schema.org data for the home page — lets search engines show the agency's name, logo and contacts.
  *  WebSite is what Google reads for the site name shown above the result (instead of the bare domain). */
 export function agencyJsonLd() {
@@ -32,19 +35,22 @@ export function agencyJsonLd() {
       {
         "@type": "WebSite",
         name: site.name,
-        alternateName: ["SAKBOL", "САКБОЛ Тревел"],
+        alternateName: ALT_NAMES,
         url: `${site.url}/`,
       },
       {
         "@type": "TravelAgency",
         name: site.name,
+        alternateName: ALT_NAMES,
         url: site.url,
         logo: `${site.url}/brand/logo-orange.png`,
         image: `${site.url}${OG_IMAGE.url}`,
         telephone: site.phone.replace(/\s/g, ""),
         email: site.email,
         address: { "@type": "PostalAddress", addressLocality: "Бишкек", addressCountry: "KG" },
-        sameAs: [site.instagram, site.telegram],
+        geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
+        hasMap: site.googleMaps,
+        sameAs: [site.instagram, site.telegram, site.googleMaps],
       },
     ],
   };

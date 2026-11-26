@@ -10,6 +10,10 @@ export const site = {
   whatsapp: "996506636364",
   telegram: "https://t.me/sakboltravel",
   instagram: "https://instagram.com/sakboltravel.kg",
+  /** Google Business Profile (Maps). The ?cid= form is the stable link to the place; share links can expire. */
+  googleMaps: "https://maps.google.com/?cid=10335929139549459302",
+  /** Office location from the Google Maps pin. */
+  geo: { lat: 42.8785602, lng: 74.5782963 },
   /** OPEN QUESTION: 24/7 vs 09:00–21:00 — see "Открытые вопросы". */
   hotlineHours: "09:00–18:00",
 };
