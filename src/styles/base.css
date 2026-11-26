@@ -2,9 +2,9 @@
 :root {
   --bg: #fffdfb; --surface: #ffffff; --surface-2: #fff4e6; --surface-3: #fff9f1;
   --ink: #26201c; --ink-2: #574a40; --muted: #756a61; --line: #f1e7db; --line-2: #ead9c6;
-  --brand: #f0861b; --brand-deep: #ab5200; --brand-press: #8f4400; --brand-tint: #fdecd7;
-  /* Filled brand surfaces with text on them (buttons, active chips): darker so white text stays readable (≥4.5:1). */
-  --brand-fill: #b85800; --brand-fill-hover: #a04c00; --on-brand: #fff;
+  --brand: #f0861b; --brand-deep: #d96a00; --brand-press: #b85800; --brand-tint: #fdecd7;
+  /* Filled brand surfaces with text on them (buttons, active chips, badges). */
+  --brand-fill: #f0861b; --brand-fill-hover: #d96a00; --on-brand: #fff;
   --accent: #008fd7; --accent-tint: #e3f2fb;
   --hot: #e23b2e; --ok: #1e9e5a; --ok-tint: #e3f5ea; --warn: #b7791f; --warn-tint: #fdf3dc;
   --shadow-1: 0 1px 2px rgba(60, 35, 10, .06), 0 2px 6px rgba(60, 35, 10, .05);
@@ -21,7 +21,7 @@
     --bg: #131519; --surface: #1b1e23; --surface-2: #22262c; --surface-3: #282d34;
     --ink: #f2f4f7; --ink-2: #c7cdd6; --muted: #98a0ab; --line: #30353d; --line-2: #3c424c;
     --brand: #ff9e3d; --brand-deep: #ffad5c; --brand-press: #ffb367; --brand-tint: #2a231c;
-    --brand-fill: #ff9e3d; --brand-fill-hover: #ffad5c; --on-brand: #1b1209;
+    --brand-fill: #ff9e3d; --brand-fill-hover: #ffad5c; --on-brand: #fff;
     --accent: #3faee8; --accent-tint: #14283a;
     --hot: #ff6a5c; --ok: #41c07d; --ok-tint: #15291f; --warn: #e5b45a; --warn-tint: #2b2416;
     --shadow-1: 0 1px 2px rgba(0, 0, 0, .4); --shadow-2: 0 10px 30px rgba(0, 0, 0, .5); --shadow-3: 0 24px 60px rgba(0, 0, 0, .6);
@@ -32,7 +32,7 @@
   --bg: #131519; --surface: #1b1e23; --surface-2: #22262c; --surface-3: #282d34;
   --ink: #f2f4f7; --ink-2: #c7cdd6; --muted: #98a0ab; --line: #30353d; --line-2: #3c424c;
   --brand: #ff9e3d; --brand-deep: #ffad5c; --brand-press: #ffb367; --brand-tint: #2a231c;
-  --brand-fill: #ff9e3d; --brand-fill-hover: #ffad5c; --on-brand: #1b1209;
+  --brand-fill: #ff9e3d; --brand-fill-hover: #ffad5c; --on-brand: #fff;
   --accent: #3faee8; --accent-tint: #14283a;
   --hot: #ff6a5c; --ok: #41c07d; --ok-tint: #15291f; --warn: #e5b45a; --warn-tint: #2b2416;
   --shadow-1: 0 1px 2px rgba(0, 0, 0, .4); --shadow-2: 0 10px 30px rgba(0, 0, 0, .5); --shadow-3: 0 24px 60px rgba(0, 0, 0, .6);

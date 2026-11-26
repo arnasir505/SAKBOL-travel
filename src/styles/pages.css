@@ -124,8 +124,8 @@ a.order-row:hover { border-color: var(--brand); box-shadow: var(--shadow-1); }
 @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
 
 /* ============ WHATSAPP ============ */
-.btn-wa { background: #12803c; color: #fff; font-family: var(--ff-display); font-size: 16px; box-shadow: 0 6px 16px rgba(26, 158, 75, .3); }
-.btn-wa:hover { background: #0f7035; }
+.btn-wa { background: #1a9e4b; color: #fff; font-family: var(--ff-display); font-size: 16px; box-shadow: 0 6px 16px rgba(26, 158, 75, .3); }
+.btn-wa:hover { background: #158a40; }
 .btn-wa:active { transform: translateY(1px); }
 .icon-btn.wa-icon { color: #1a9e4b; }
 .icon-btn.wa-icon:hover { border-color: #1a9e4b; color: #158a40; }
