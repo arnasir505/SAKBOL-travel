@@ -47,7 +47,7 @@ export default async function AboutPage() {
         </p>
         <p className="contact-line">
           <MapPin />
-          <a href={site.googleMaps} target="_blank" rel="noopener noreferrer">{t("office_addr")}</a>
+          <a href={site.twoGis} target="_blank" rel="noopener noreferrer">{t("office_addr")}</a>
         </p>
       </section>
     </div>

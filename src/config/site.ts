@@ -12,6 +12,8 @@ export const site = {
   instagram: "https://instagram.com/sakboltravel.kg",
   /** Google Business Profile (Maps). The ?cid= form is the stable link to the place; share links can expire. */
   googleMaps: "https://maps.google.com/?cid=10335929139549459302",
+  /** 2GIS listing — the map most people use in Kyrgyzstan, so the address on the site links here. */
+  twoGis: "https://2gis.kg/bishkek/firm/70000001105749928",
   /** Office location from the Google Maps pin. */
   geo: { lat: 42.8785602, lng: 74.5782963 },
   /** Office and hotline hours, Monday to Friday (the weekday part of the label is in the dictionaries, key hot_wh). */

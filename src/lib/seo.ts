@@ -51,7 +51,7 @@ export function agencyJsonLd() {
         openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
         geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
         hasMap: site.googleMaps,
-        sameAs: [site.instagram, site.telegram, site.googleMaps],
+        sameAs: [site.instagram, site.telegram, site.googleMaps, site.twoGis],
       },
     ],
   };
