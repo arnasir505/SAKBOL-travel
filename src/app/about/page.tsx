@@ -47,8 +47,7 @@ export default async function AboutPage() {
         </p>
         <p className="contact-line">
           <MapPin />
-          {/* TODO: office address */}
-          Бишкек, Кыргызстан
+          <a href={site.googleMaps} target="_blank" rel="noopener noreferrer">{t("office_addr")}</a>
         </p>
       </section>
     </div>

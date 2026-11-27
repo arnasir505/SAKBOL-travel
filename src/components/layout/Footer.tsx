@@ -44,6 +44,7 @@ export function Footer() {
             <Link href="/about#contacts">{t("nav_contacts")}</Link>
             <a href={site.phoneHref}>{site.phone}</a>
             <a href={`mailto:${site.email}`}>{site.email}</a>
+            <a href={site.googleMaps} target="_blank" rel="noopener noreferrer">{t("office_addr")}</a>
             <Link href="/help">{t("fc_faq")}</Link>
           </div>
         </div>

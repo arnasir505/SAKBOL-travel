@@ -14,8 +14,10 @@ export const site = {
   googleMaps: "https://maps.google.com/?cid=10335929139549459302",
   /** Office location from the Google Maps pin. */
   geo: { lat: 42.8785602, lng: 74.5782963 },
-  /** OPEN QUESTION: 24/7 vs 09:00–21:00 — see "Открытые вопросы". */
+  /** Office and hotline hours, Monday to Friday (the weekday part of the label is in the dictionaries, key hot_wh). */
   hotlineHours: "09:00–18:00",
+  /** Office address for search engines; the address shown on the site is in the dictionaries (key office_addr). */
+  address: { street: "ул. Калыка Акиева, 95, БЦ «Атриум», 2 этаж", district: "Ленинский район", city: "Бишкек", country: "KG" },
 };
 
 export const rules = {

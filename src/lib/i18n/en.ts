@@ -94,7 +94,8 @@ export const en: Dict = {
   cta_h2: "We'll arrange your trip right in WhatsApp",
   cta_p: "Flights, tours, hotels and visas — message us and a manager will reply during business hours.",
   hot_line: "Hotline",
-  hot_wh: "Daily {hours}",
+  hot_wh: "Mon–Fri {hours}",
+  office_addr: "Atrium Business Center, 2nd floor, 95 Kalyk Akiev St, Bishkek",
   faq_h2: "Frequently asked questions",
 
   fc_serv: "Services",
